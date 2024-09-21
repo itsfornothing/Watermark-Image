@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Download page</title>
+        <link href="static/style.css" rel="stylesheet">
+
+</head>
+<body>
+    <h1>Your Watermarked Image</h1>
+
+    <!-- Display the image -->
+    <div >
+    <img class="img_div" src="{{ url_for('serve_watermarked_image', filename=watermarked_filepath) }}" alt="Watermarked Image" style="height:600px;width:50%; ">
+    </div>
+    <!-- Download link for the watermarked image -->
+    <br><br>
+    <a href="{{ url_for('serve_watermarked_image', filename=watermarked_filepath) }}" download>
+        Click here to download your watermarked image
+    </a>
+</body>
+</html>
